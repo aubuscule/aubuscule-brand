@@ -7,10 +7,18 @@
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../../components/components.css">
 <link rel="stylesheet" href="../templates.css">
+<script defer src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+<script defer src="../download-artboard-png.js"></script>
 </head>
 <body class="stage">
-<p class="stage-note">LinkedIn banner · 1584 × 396. Click any text to replace it. Keep the bottom-left corner clear: the profile picture covers it. Add <a href="#export">#export</a> to the address to show the artboard alone, then save a screenshot at that size.</p>
-<div class="artboard li-banner">
+<div class="stage-tools">
+  <p class="stage-note">LinkedIn banner · 1584 × 396. Click any text to replace it, then download the PNG at full size. Keep the bottom-left corner clear: the profile picture covers it. Add <a href="#export">#export</a> to show the artboard alone.</p>
+  <div class="stage-actions">
+    <button class="btn-primary btn-sm" type="button" data-export-target="#linkedin-banner" data-export-filename="aubuscule-linkedin-banner.png">Download PNG</button>
+  </div>
+  <p class="export-status" data-export-status role="status" aria-live="polite"></p>
+</div>
+<div id="linkedin-banner" class="artboard li-banner">
   <div>
     <h1 class="li-banner-title" contenteditable>Websites · Apps · Automation<br>Audio &amp; Video Studio</h1>
     <div class="li-banner-tag" contenteditable>Focus on your work — we build the rest</div>

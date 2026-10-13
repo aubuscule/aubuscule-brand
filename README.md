@@ -32,7 +32,7 @@ To bring a project up to date, read `CHANGELOG.md` from the recorded version to 
 - Colours, sizes and radii come from `tokens/`. No literal colour values anywhere else, except inside exported files in `assets/`.
 - Components are an HTML snippet plus classes. Hover and focus are CSS. Class names match `aubuscule-agency` where the site already has them.
 - Light is the default. Dark is `data-theme="dark"`, on `<html>` or on any element. `data-theme="light"` forces light the same way.
-- Script only where the browser must act for the visitor: the theme toggle on `index.html`. Nothing needs script to render.
+- Script only where the browser must act for the visitor: the theme toggle on `index.html` and PNG downloads on the artboard templates. Nothing needs script to render.
 - Printed and shared material always uses the dark theme.
 
 ## Content
@@ -54,9 +54,9 @@ To bring a project up to date, read `CHANGELOG.md` from the recorded version to 
 
 ## Templates
 
-Each template page holds an artboard at its exact export size. Text marked editable can be typed over in the browser.
+Each template page holds an artboard at its exact export size. Text marked editable can be typed over in the browser. Use **Download PNG** above the artboard to save it at 2× resolution (for example, a 1080 × 1350 Instagram post downloads as 2160 × 2700). This uses a pinned capture library from jsDelivr, so exporting requires an internet connection. If the library is unavailable, the screenshot method below remains available.
 
-To export, add `#export` to the address so only the artboard shows, then screenshot at the artboard size (for the business card, use `#front` or `#back` to export each side):
+Alternatively, add `#export` to the address so only the artboard shows, then screenshot at the artboard size (for the business card, use `#front` or `#back` to export each side):
 
 ```bash
 chromium --headless --hide-scrollbars --virtual-time-budget=6000 \

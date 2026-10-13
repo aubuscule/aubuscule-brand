@@ -7,10 +7,18 @@
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../../components/components.css">
 <link rel="stylesheet" href="../templates.css">
+<script defer src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+<script defer src="../download-artboard-png.js"></script>
 </head>
 <body class="stage">
-<p class="stage-note">Instagram post · 1080 × 1350. Click any text to replace it. Add <a href="#export">#export</a> to the address to show the artboard alone, then save a screenshot at that size.</p>
-<div class="artboard artboard--glow social ig-post">
+<div class="stage-tools">
+  <p class="stage-note">Instagram post · 1080 × 1350. Click any text to replace it, then download the PNG at full size. Add <a href="#export">#export</a> to show the artboard alone.</p>
+  <div class="stage-actions">
+    <button class="btn-primary btn-sm" type="button" data-export-target="#instagram-post" data-export-filename="aubuscule-instagram-post.png">Download PNG</button>
+  </div>
+  <p class="export-status" data-export-status role="status" aria-live="polite"></p>
+</div>
+<div id="instagram-post" class="artboard artboard--glow social ig-post">
   <span class="social-eyebrow" contenteditable>Services · 01—04</span>
   <div class="social-body">
     <h1 class="social-title" contenteditable>Focus on your art. We handle the rest.</h1>

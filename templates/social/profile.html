@@ -7,10 +7,18 @@
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../../components/components.css">
 <link rel="stylesheet" href="../templates.css">
+<script defer src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+<script defer src="../download-artboard-png.js"></script>
 </head>
 <body class="stage">
-<p class="stage-note">Profile picture · 1080 × 1080. Platforms crop it to a circle; the mark stays inside. Add <a href="#export">#export</a> to the address to show the artboard alone, then save a screenshot at that size.</p>
-<div class="artboard artboard--glow profile">
+<div class="stage-tools">
+  <p class="stage-note">Profile picture · 1080 × 1080. Platforms crop it to a circle; the mark stays inside. Download the PNG at full size, or add <a href="#export">#export</a> to show the artboard alone.</p>
+  <div class="stage-actions">
+    <button class="btn-primary btn-sm" type="button" data-export-target="#profile-picture" data-export-filename="aubuscule-profile-picture.png">Download PNG</button>
+  </div>
+  <p class="export-status" data-export-status role="status" aria-live="polite"></p>
+</div>
+<div id="profile-picture" class="artboard artboard--glow profile">
   <span class="mark mark--gradient"></span>
 </div>
 </body>

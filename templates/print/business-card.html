@@ -8,13 +8,22 @@
 <link rel="stylesheet" href="../../components/components.css">
 <link rel="stylesheet" href="business-card.css">
 <link rel="stylesheet" href="../templates.css">
+<script defer src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+<script defer src="../download-artboard-png.js"></script>
 <script>
   if (location.hash === '#export-back') location.replace('#back');
   if (location.hash === '#export-front') location.replace('#front');
 </script>
 </head>
 <body class="stage">
-<p class="stage-note">Business card · 85 × 55 mm, shown at 10 px per mm. Click any text to replace it. Add <a href="#front">#front</a> or <a href="#back">#back</a> to the address to show either card alone, then save a screenshot at that size.</p>
+<div class="stage-tools">
+  <p class="stage-note">Business card · 85 × 55 mm, shown at 10 px per mm. Click any text to replace it, then download each side as a full-size PNG. Add <a href="#front">#front</a> or <a href="#back">#back</a> to show either card alone.</p>
+  <div class="stage-actions">
+    <button class="btn-primary btn-sm" type="button" data-export-target="#front" data-export-filename="aubuscule-business-card-front.png">Download front PNG</button>
+    <button class="btn-secondary btn-sm" type="button" data-export-target="#back" data-export-filename="aubuscule-business-card-back.png">Download back PNG</button>
+  </div>
+  <p class="export-status" data-export-status role="status" aria-live="polite"></p>
+</div>
 <div id="front" class="artboard print-card bc-wrap"><div class="bc bc-front">
   <div class="bc-lockup"><span class="mark mark--gradient"></span><span class="bc-word text-gradient">Aubuscule</span></div>
 </div></div>

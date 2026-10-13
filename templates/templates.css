@@ -1,9 +1,8 @@
 /* Shared frame for templates. An .artboard is the exact pixel size of the export.
    Text marked contenteditable can be typed over in the browser before exporting.
 
-   Export: open the page with #export at the end of the address
-   (templates/social/instagram-post.html#export). Everything but the artboard
-   disappears, so a window of the artboard's size is the finished image. */
+   Export: use the Download PNG action, or open the page with #export at the
+   end of the address to show only the artboard. */
 
 .stage {
   display: flex;
@@ -24,6 +23,29 @@
   color: var(--ink-mute);
 }
 .stage-note a { color: var(--ink-soft); }
+.stage-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  max-width: 620px;
+}
+.stage-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-3);
+}
+.stage-actions button:disabled { cursor: wait; opacity: 0.7; }
+.export-status {
+  min-height: 1.6em;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-align: center;
+  color: var(--ink-mute);
+}
+.export-status[data-state="error"] { color: var(--negative); }
 
 .artboard {
   position: relative;
@@ -48,8 +70,8 @@ html:target .stage,
   padding: 0;
   background: none;
 }
-html:target .stage-note,
-:root:has(.artboard:target) .stage-note {
+html:target .stage-tools,
+:root:has(.artboard:target) .stage-tools {
   display: none;
 }
 html:target .artboard + .artboard,

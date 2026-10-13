@@ -31,3 +31,4 @@ First version. Seeded from the live site (`aubuscule-agency`, `src/styles/tokens
 
 - Social templates are rebuilt on the current palette. The earlier exports used the retired warm-paper colours (`#1c1b18`, `#e8e6e0`) and should be replaced wherever they are still in use.
 - `assets/mark.svg`, `assets/mark-night.svg`, both business-card SVGs, and PNG exports of the profile picture and LinkedIn banner.
+- Editable social, profile, and business-card templates now include 2×-resolution PNG downloads in the browser.
