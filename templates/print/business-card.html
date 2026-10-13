@@ -8,13 +8,17 @@
 <link rel="stylesheet" href="../../components/components.css">
 <link rel="stylesheet" href="business-card.css">
 <link rel="stylesheet" href="../templates.css">
+<script>
+  if (location.hash === '#export-back') location.replace('#back');
+  if (location.hash === '#export-front') location.replace('#front');
+</script>
 </head>
 <body class="stage">
-<p class="stage-note">Business card · 85 × 55 mm, shown at 10 px per mm. Click any text to replace it. The first artboard is the front; for the back, export from the SVG in assets or screenshot the second card. Add <a href="#export">#export</a> to the address to show the artboard alone, then save a screenshot at that size.</p>
-<div class="artboard print-card bc-wrap"><div class="bc bc-front">
+<p class="stage-note">Business card · 85 × 55 mm, shown at 10 px per mm. Click any text to replace it. Add <a href="#front">#front</a> or <a href="#back">#back</a> to the address to show either card alone, then save a screenshot at that size.</p>
+<div id="front" class="artboard print-card bc-wrap"><div class="bc bc-front">
   <div class="bc-lockup"><span class="mark mark--gradient"></span><span class="bc-word text-gradient">Aubuscule</span></div>
 </div></div>
-<div class="artboard print-card bc-wrap"><div class="bc bc-back">
+<div id="back" class="artboard print-card bc-wrap"><div class="bc bc-back">
   <div class="bc-top">
     <div><span class="bc-name" contenteditable>Name Surname</span><span class="bc-role" contenteditable>Co-founder</span></div>
     <span class="mark mark--gradient"></span>

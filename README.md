@@ -56,7 +56,7 @@ To bring a project up to date, read `CHANGELOG.md` from the recorded version to 
 
 Each template page holds an artboard at its exact export size. Text marked editable can be typed over in the browser.
 
-To export, add `#export` to the address so only the artboard shows, then screenshot at the artboard size:
+To export, add `#export` to the address so only the artboard shows, then screenshot at the artboard size (for the business card, use `#front` or `#back` to export each side):
 
 ```bash
 chromium --headless --hide-scrollbars --virtual-time-budget=6000 \

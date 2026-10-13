@@ -41,9 +41,21 @@
 .artboard [contenteditable]:focus { box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 40%, transparent); }
 
 /* Export mode */
-html:target .stage { display: block; min-height: 0; padding: 0; background: none; }
-html:target .stage-note { display: none; }
-html:target .artboard + .artboard { display: none; }
+html:target .stage,
+:root:has(.artboard:target) .stage {
+  display: block;
+  min-height: 0;
+  padding: 0;
+  background: none;
+}
+html:target .stage-note,
+:root:has(.artboard:target) .stage-note {
+  display: none;
+}
+html:target .artboard + .artboard,
+:root:has(.artboard:target) .artboard:not(:target) {
+  display: none;
+}
 
 /* ── Social formats ───────────────────────────────────────────────────*/
 .social { padding: 96px; justify-content: space-between; }
