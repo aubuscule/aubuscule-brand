@@ -1,0 +1,65 @@
+/* Aubuscule colour tokens. The only place colours are defined. */
+:root,
+[data-theme="light"] {
+  /* Surfaces */
+  --bg:            #e1e2e7;
+  --surface:       #ffffff;
+  --surface-dark:  #c4c8da;
+
+  /* Ink, strong to faint */
+  --ink:           #3f3366;
+  --ink-soft:      #5b4f80;
+  --ink-mute:      #776c99;
+  --ink-dim:       #9489b3;
+  --ink-faint:     #b1a7cc;
+
+  /* Lines */
+  --hairline:      #c4c8da;
+  --hairline-soft: #d0d5e3;
+
+  /* Accent */
+  --accent:        #3c296d;
+  --accent-fg:     #ffffff;
+  --accent-2:      #593c9d;
+  --heading-ink:   #593c9d;
+  --focus-ring:    var(--accent);
+
+  /* Glow: the elliptical gradient behind large lockups */
+  --grad-center:   #c4c8da;
+  --grad-mid:      #d0d5e3;
+  --grad-edge:     var(--bg);
+
+  /* Status, used only for do / avoid labels */
+  --positive:      #1f8a4d;
+  --negative:      #b04a3a;
+}
+
+/* Dark theme, Tokyo Night inspired. Works on <html> or on any element,
+   so printed and shared material can force it locally. */
+[data-theme="dark"] {
+  --bg:            #09080c;
+  --surface:       #1a1b26;
+  --surface-dark:  #16161e;
+
+  --ink:           #c0caf5;
+  --ink-soft:      #9aa5ce;
+  --ink-mute:      #565f89;
+  --ink-faint:     #414868;
+  --ink-dim:       #292e42;
+
+  --hairline:      #1f1d2e;
+  --hairline-soft: #16161e;
+
+  --accent:        #bb9af7;
+  --accent-fg:     #1a1b26;
+  --accent-2:      #f7768e;
+  --heading-ink:   var(--ink);
+  --focus-ring:    var(--accent);
+
+  --grad-center:   #1f1b2e;
+  --grad-mid:      #110f17;
+  --grad-edge:     var(--bg);
+
+  --positive:      #9ece6a;
+  --negative:      #f7768e;
+}

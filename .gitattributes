@@ -1,0 +1,10 @@
+# Design masters go through Git LFS (install git-lfs before adding the first one)
+*.afdesign filter=lfs diff=lfs merge=lfs -text
+*.afphoto  filter=lfs diff=lfs merge=lfs -text
+*.afpub    filter=lfs diff=lfs merge=lfs -text
+*.af       filter=lfs diff=lfs merge=lfs -text
+*.psd      filter=lfs diff=lfs merge=lfs -text
+*.tif      filter=lfs diff=lfs merge=lfs -text
+*.tiff     filter=lfs diff=lfs merge=lfs -text
+sources/**/*.png filter=lfs diff=lfs merge=lfs -text
+sources/**/*.jpg filter=lfs diff=lfs merge=lfs -text

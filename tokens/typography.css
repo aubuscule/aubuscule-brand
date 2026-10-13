@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Aubuscule type tokens. Space Grotesk for everything read, JetBrains Mono for labels and specs. */
+:root {
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --fs-display:    58px;
+  --fs-hub:        48px;
+  --fs-h2:         38px;
+  --fs-h3:         24px;
+  --fs-card-title: 20px;
+  --fs-lead:       17px;
+  --fs-body:       16px;
+  --fs-small:      14.5px;
+  --fs-eyebrow:    12px;
+  --fs-label:      10.5px;
+
+  --tracking-display: -0.03em;
+  --tracking-h2:      -0.025em;
+  --tracking-title:   -0.02em;
+  --tracking-eyebrow: 0.22em;
+  --tracking-label:   0.16em;
+
+  --lh-display: 1.04;
+  --lh-h2:      1.08;
+  --lh-body:    1.6;
+  --lh-lead:    1.65;
+}

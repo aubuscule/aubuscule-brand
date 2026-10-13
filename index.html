@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aubuscule brand guidelines</title>
+<meta name="description" content="The visual and verbal framework of Aubuscule: mark, palette, typography, components, voice and templates.">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="components/components.css">
+<link rel="stylesheet" href="templates/print/business-card.css">
+<link rel="stylesheet" href="site.css">
+<script>
+  /* Theme: saved choice, else the system setting. Runs early to avoid a flash. */
+  (function () {
+    var theme;
+    try { theme = localStorage.getItem('theme'); } catch (e) {}
+    if (!theme) theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.dataset.theme = theme;
+  })();
+  function toggleTheme() {
+    var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  }
+</script>
+</head>
+<body>
+<div class="gl-layout">
+
+  <aside class="gl-side">
+    <div class="gl-side-brand">
+      <a class="logo" href="#top"><span class="mark mark--gradient"></span><span class="logo-wordmark">Aubuscule</span></a>
+      <span class="eyebrow">Brand guidelines</span>
+    </div>
+    <nav class="gl-side-nav" aria-label="Brand guidelines sections">
+      <a class="gl-side-link" href="#brand"><span>01</span>Brand</a>
+      <a class="gl-side-link" href="#logo"><span>02</span>Logo</a>
+      <a class="gl-side-link" href="#colour"><span>03</span>Colour</a>
+      <a class="gl-side-link" href="#typography"><span>04</span>Typography</a>
+      <a class="gl-side-link" href="#shape"><span>05</span>Spacing &amp; shape</a>
+      <a class="gl-side-link" href="#components"><span>06</span>Components</a>
+      <a class="gl-side-link" href="#voice"><span>07</span>Voice</a>
+      <a class="gl-side-link" href="#motion"><span>08</span>Motion</a>
+      <a class="gl-side-link" href="#external"><span>09</span>External use</a>
+      <a class="gl-side-link" href="#files"><span>10</span>Files</a>
+    </nav>
+    <button class="gl-theme" type="button" onclick="toggleTheme()">Light / dark</button>
+  </aside>
+
+  <main class="gl-main" id="top">
+
+    <header class="gl-hero">
+      <span class="eyebrow">Brand guidelines · v0.1</span>
+      <h1 class="gl-display">Focus on your art. We handle the rest.</h1>
+      <p class="gl-lead">The visual and verbal framework of Aubuscule: a dot-trame mark, a purple palette, two typefaces, a direct voice. Read before producing anything.</p>
+    </header>
+
+    <section class="gl-section" id="brand">
+      <div class="gl-head"><span class="eyebrow eyebrow--accent">01 · Brand</span><h2 class="gl-h2">Who we are</h2></div>
+      <p class="gl-lead">Aubuscule is a pair of digital craftspeople based in Brussels. We support artists on four fronts: <b>digital, audio, video, admin</b>. We also publish a few simple pieces of software: Remplate, Zones Tonales.</p>
+      <div class="gl-grid-3">
+        <div class="card card--padded gl-tile"><span class="eyebrow eyebrow--accent">01</span><strong class="card-title">Simple</strong><span class="gl-body">One need, one clear solution. No jargon, no pointless options.</span></div>
+        <div class="card card--padded gl-tile"><span class="eyebrow eyebrow--accent">02</span><strong class="card-title">Crafted</strong><span class="gl-body">Small team, careful work, direct contact with both founders.</span></div>
+        <div class="card card--padded gl-tile"><span class="eyebrow eyebrow--accent">03</span><strong class="card-title">Handed over</strong><span class="gl-body">We build, then hand you the keys: you stay independent.</span></div>
+      </div>
+    </section>
+
+    <section class="gl-section" id="logo">
+      <div class="gl-head"><span class="eyebrow eyebrow--accent">02 · Logo</span><h2 class="gl-h2">The mark</h2></div>
+      <p class="gl-lead">A solid disc and a crescent of dots; light emerges from the right. The animated gradient is reserved for large formats; everywhere else, use flat colour.</p>
+      <div class="gl-grid-3">
+        <div class="card gl-tile gl-logo-tile"><span class="mark mark--gradient"></span><span class="eyebrow">Animated gradient</span></div>
+        <div class="card gl-tile gl-logo-tile"><span class="mark"></span><span class="eyebrow">Flat</span></div>
+        <div class="card gl-tile gl-logo-tile gl-logo-night" data-theme="dark"><span class="mark mark--gradient"></span><span class="eyebrow">On dark</span></div>
+      </div>
+      <div class="card gl-tile gl-lockup-h">
+        <span class="mark mark--gradient"></span><span class="logo-wordmark">Aubuscule</span>
+        <span class="eyebrow">Horizontal lockup</span>
+      </div>
+      <div class="card gl-tile gl-lockup-v">
+        <span class="logo logo--vertical"><span class="mark mark--gradient"></span><span class="logo-wordmark text-gradient">Aubuscule</span></span>
+        <span class="eyebrow">Vertical lockup · hub &amp; large formats</span>
+      </div>
+      <div class="gl-grid-2">
+        <div class="card card--padded gl-tile"><span class="eyebrow gl-do">Do</span><span class="gl-body">Keep clear space equal to half the mark's height. Minimum 24 px on screen.</span></div>
+        <div class="card card--padded gl-tile"><span class="eyebrow gl-avoid">Avoid</span><span class="gl-body">Don't rotate the crescent, use off-palette colours, or stretch the mark.</span></div>
+      </div>
+    </section>
+
+    <section class="gl-section" id="colour">
+      <div class="gl-head"><span class="eyebrow eyebrow--accent">03 · Colour</span><h2 class="gl-h2">Palette</h2></div>
+      <p class="gl-lead">A lavender-grey background, white cards, a deep purple. Dark mode draws on Tokyo Night. One accent per screen.</p>
+      <div class="gl-palette">
+        <span class="eyebrow">Accent</span>
+        <div class="gl-swatches">
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--accent)"></div><b>Accent</b><code>#3c296d</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--accent-2)"></div><b>Accent 2</b><code>#593c9d</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--heading-ink)"></div><b>Headings</b><code>#593c9d</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--accent-fg)"></div><b>On accent</b><code>#ffffff</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="dark" style="background:var(--accent)"></div><b>Night · accent</b><code>#bb9af7</code></div>
+        </div>
+      </div>
+      <div class="gl-palette">
+        <span class="eyebrow">Ink</span>
+        <div class="gl-swatches">
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--ink)"></div><b>Ink</b><code>#3f3366</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--ink-soft)"></div><b>Soft</b><code>#5b4f80</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--ink-mute)"></div><b>Muted</b><code>#776c99</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--ink-dim)"></div><b>Dim</b><code>#9489b3</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--ink-faint)"></div><b>Faint</b><code>#b1a7cc</code></div>
+        </div>
+      </div>
+      <div class="gl-palette">
+        <span class="eyebrow">Surfaces</span>
+        <div class="gl-swatches">
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--bg)"></div><b>Background</b><code>#e1e2e7</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--surface)"></div><b>Card</b><code>#ffffff</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="light" style="background:var(--surface-dark)"></div><b>Footer</b><code>#c4c8da</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="dark" style="background:var(--bg)"></div><b>Night · bg</b><code>#09080c</code></div>
+          <div class="gl-swatch"><div class="gl-chip" data-theme="dark" style="background:var(--surface)"></div><b>Night · card</b><code>#1a1b26</code></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gl-section" id="typography">
+      <div class="gl-head"><span class="eyebrow eyebrow--accent">04 · Typography</span><h2 class="gl-h2">Two families</h2></div>
+      <div class="gl-grid-2">
+        <div class="card card--padded gl-tile"><span class="gl-specimen">Aa</span><strong class="card-title">Space Grotesk</strong><span class="gl-body">Headings, interface, body text. 400 · 500 · 600.</span></div>
+        <div class="card card--padded gl-tile"><span class="gl-specimen gl-mono">Aa</span><strong class="card-title gl-mono">JetBrains Mono</strong><span class="gl-body">Labels, prices, specs. Uppercase, wide tracking.</span></div>
+      </div>
+      <div class="card gl-tile gl-scale">
+        <div class="gl-scale-row"><div><span class="eyebrow">Display</span><code>58 / 1.04 · 600</code></div><div class="type-display">Our work</div></div>
+        <div class="gl-scale-row"><div><span class="eyebrow">Heading 2</span><code>38 / 1.08 · 600</code></div><div class="type-h2">Four fields, one team</div></div>
+        <div class="gl-scale-row"><div><span class="eyebrow">Heading 3</span><code>24 · 600</code></div><div class="type-h3">Artist services</div></div>
+        <div class="gl-scale-row"><div><span class="eyebrow">Lead</span><code>17 / 1.65 · 400</code></div><div class="type-lead">Aubuscule supports artists on four fronts.</div></div>
+        <div class="gl-scale-row"><div><span class="eyebrow">Body</span><code>14.5 / 1.6 · 400</code></div><div class="type-body">Every service is available à la carte or as full support.</div></div>
+        <div class="gl-scale-row"><div><span class="eyebrow">Eyebrow</span><code>Mono 12 · .22em</code></div><div class="eyebrow">Services · 01—04</div></div>
+      </div>
+    </section>
+
+    <section class="gl-section" id="shape">
+      <div class="gl-head"><span class="eyebrow eyebrow--accent">05 · Spacing &amp; shape</span><h2 class="gl-h2">Square, airy, flat</h2></div>
+      <div class="gl-grid-2">
+        <div class="card card--padded gl-tile">
+          <span class="eyebrow">Scale · 4 px base</span>
+          <div class="gl-bar"><code>4px</code><i style="width:9px"></i></div>
+          <div class="gl-bar"><code>8px</code><i style="width:18px"></i></div>
+          <div class="gl-bar"><code>12px</code><i style="width:26px"></i></div>
+          <div class="gl-bar"><code>16px</code><i style="width:35px"></i></div>
+          <div class="gl-bar"><code>24px</code><i style="width:53px"></i></div>
+          <div class="gl-bar"><code>32px</code><i style="width:70px"></i></div>
+          <div class="gl-bar"><code>48px</code><i style="width:106px"></i></div>
+          <div class="gl-bar"><code>64px</code><i style="width:141px"></i></div>
+          <div class="gl-bar"><code>96px</code><i style="width:211px"></i></div>
+        </div>
+        <div class="card card--padded gl-tile">
+          <span class="eyebrow">Radii</span>
+          <div class="gl-radii">
+            <div><div class="gl-radius" style="border-radius:var(--radius-button)"></div><b>2px</b><code>buttons, fields</code></div>
+            <div><div class="gl-radius" style="border-radius:var(--radius-card)"></div><b>3px</b><code>cards</code></div>
+            <div><div class="gl-radius" style="border-radius:var(--radius-panel)"></div><b>8px</b><code>hub cards</code></div>
+            <div><div class="gl-radius" style="border-radius:var(--radius-pill)"></div><b>100px</b><code>badges</code></div>
+          </div>
+        </div>
+      </div>
+      <p class="gl-body">Content width 1120 px, 40 px gutters. Sections separated by a 1 px hairline and 64–96 px of padding. No border on cards: only the <code>0 1px 3px</code> shadow.</p>
+    </section>
+
+    <section class="gl-section" id="components">
+      <div class="gl-head"><span class="eyebrow eyebrow--accent">06 · Components</span><h2 class="gl-h2">Interface elements</h2></div>
+      <div class="card card--padded gl-tile">
+        <span class="eyebrow">Buttons</span>
+        <div class="gl-row">
+          <a class="btn-primary" href="#components">Discover our services</a>
+          <a class="btn-secondary" href="#components">Get in touch</a>
+        </div>
+        <span class="gl-body">Primary: accent fill, 85% on hover. Secondary: ink outline, inverts on hover. 2 px corners.</span>
+      </div>
+      <div class="gl-grid-2">
+        <div class="card card--padded gl-tile">
+          <span class="eyebrow">Badge, tags, eyebrow</span>
+          <div class="gl-row"><span class="badge">Free templates</span><span class="tag">Desktop</span><span class="tag">PDF</span></div>
+          <span class="eyebrow">Services · 01—04</span>
+        </div>
+        <div class="card card--padded gl-tile">
+          <span class="eyebrow">Fields</span>
+          <label class="field"><span>Email</span><input type="email" placeholder="you@example.com"></label>
+          <span class="gl-body">Underline only; it turns ink-coloured on focus.</span>
+        </div>
+      </div>
+      <div class="gl-grid-2">
+        <div class="card card--padded gl-tile">
+          <span class="eyebrow">Segmented control</span>
+          <div class="segmented" role="radiogroup" aria-label="Device" style="background:var(--bg);align-self:flex-start">
+            <label><input type="radio" name="device" checked><span>reMarkable 2</span></label>
+            <label><input type="radio" name="device"><span>Pro</span></label>
+            <label><input type="radio" name="device"><span>Pro Move</span></label>
+          </div>
+          <span class="gl-body">A radio group; no script needed.</span>
+        </div>
+        <div class="card gl-tile gl-faq">
+          <details class="accordion" open>
+            <summary>Where do I find my reMarkable's IP address?</summary>
+            <div class="accordion-body">Settings → General → Help → Copyright and licences.</div>
+          </details>
+          <details class="accordion">
+            <summary>Can I delete the original templates?</summary>
+            <div class="accordion-body">No. Remplate never touches the original files.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="gl-section" id="voice">
+      <div class="gl-head"><span class="eyebrow eyebrow--accent">07 · Voice</span><h2 class="gl-h2">Direct, calm, jargon-free</h2></div>
+      <div class="gl-grid-2">
+        <div class="card card--padded gl-tile"><strong class="card-title">Formal address</strong><span class="gl-body">The reader is “you”; the studio is “we”. In French, always vouvoiement.</span></div>
+        <div class="card card--padded gl-tile"><strong class="card-title">Benefit first</strong><span class="gl-body">Lead with what the reader gains, then explain how.</span></div>
+        <div class="card card--padded gl-tile"><strong class="card-title">Short sentences</strong><span class="gl-body">One idea per sentence. No decorative metaphors.</span></div>
+        <div class="card card--padded gl-tile"><strong class="card-title">Sentence case</strong><span class="gl-body">Headings and buttons: initial capital only. Eyebrows in mono capitals.</span></div>
+      </div>
+      <div class="gl-grid-2">
+        <div class="card card--padded gl-tile"><span class="eyebrow gl-do">We write</span><span>“We reply fast, no jargon.”<br>“Fixed price, no subscription.”</span></div>
+        <div class="card card--padded gl-tile"><span class="eyebrow gl-avoid">We avoid</span><span class="gl-body">“Innovative, synergistic solutions”<br>Exclamation marks, emojis, empty buzzwords.</span></div>
+      </div>
+    </section>
+
+    <section class="gl-section" id="motion">
+      <div class="gl-head"><span class="eyebrow eyebrow--accent">08 · Motion</span><h2 class="gl-h2">Restrained</h2></div>
+      <div class="gl-grid-3">
+        <div class="card card--padded gl-tile"><code class="gl-accent">0.15 – 0.2 s · ease</code><strong class="card-title">Hover</strong><span class="gl-body">Opacity and colour inversion, nothing more.</span></div>
+        <div class="card card--padded gl-tile"><code class="gl-accent">8 s · loop</code><strong class="card-title">Mark gradient</strong><span class="gl-body">Purple slides toward pink; reserved for the mark and the hub title.</span></div>
+        <div class="card card--padded gl-tile"><code class="gl-accent">.23, 1, .32, 1</code><strong class="card-title">Entrances</strong><span class="gl-body">Soft fade on load. Respect prefers-reduced-motion.</span></div>
+      </div>
+    </section>
+
+    <section class="gl-section" id="external">
+      <div class="gl-head"><span class="eyebrow eyebrow--accent">09 · External use</span><h2 class="gl-h2">Off-screen, on the table</h2></div>
+      <p class="gl-lead">Printed and shared material always uses the dark theme: near-black ground, lavender ink, purple-to-pink mark. It is the same system, just at night.</p>
+      <span class="eyebrow">Business card · 85 × 55 mm</span>
+      <div class="gl-bc-stage">
+        <div class="bc-wrap"><div class="bc bc-front" data-theme="dark">
+          <div class="bc-lockup"><span class="mark mark--gradient"></span><span class="bc-word text-gradient">Aubuscule</span></div>
+        </div></div>
+        <div class="bc-wrap"><div class="bc bc-back" data-theme="dark">
+          <div class="bc-top">
+            <div><span class="bc-name">Name Surname</span><span class="bc-role">Co-founder</span></div>
+            <span class="mark mark--gradient"></span>
+          </div>
+          <div class="bc-contact"><span>contact@aubuscule.com</span><span>@aubuscule_agency</span><span class="bc-dim">Brussels, Belgium</span></div>
+        </div></div>
+      </div>
+      <div class="gl-links">
+        <a href="assets/business-card-front.svg" download>Front SVG ↓</a>
+        <a href="assets/business-card-back.svg" download>Back SVG ↓</a>
+        <a href="templates/print/business-card.html">Editable template →</a>
+      </div>
+      <div class="gl-grid-3">
+        <div class="card card--padded gl-tile"><span class="eyebrow eyebrow--accent">Format</span><span class="gl-body">85 × 55 mm, 3 mm bleed, rounded corners optional (3 mm).</span></div>
+        <div class="card card--padded gl-tile"><span class="eyebrow eyebrow--accent">Stock</span><span class="gl-body">Uncoated black or very dark card, 350 gsm. Print the mark with a matte or soft-touch finish.</span></div>
+        <div class="card card--padded gl-tile"><span class="eyebrow eyebrow--accent">Colours</span><span class="gl-body">#09080c ground, #c0caf5 and #9aa5ce text, #bb9af7 → #f7768e on the mark and wordmark.</span></div>
+      </div>
+    </section>
+
+    <section class="gl-section" id="files">
+      <div class="gl-head"><span class="eyebrow eyebrow--accent">10 · Files</span><h2 class="gl-h2">Take what you need</h2></div>
+      <p class="gl-lead">Everything here is plain HTML and CSS. Copy the tokens and the classes you use into a project; nothing has to be installed.</p>
+      <span class="eyebrow">Tokens</span>
+      <div class="gl-links">
+        <a href="tokens/colors.css">colors.css</a>
+        <a href="tokens/typography.css">typography.css</a>
+        <a href="tokens/spacing.css">spacing.css</a>
+        <a href="components/components.css">components.css</a>
+      </div>
+      <span class="eyebrow">Components</span>
+      <div class="gl-links">
+        <a href="components/mark.html">Mark &amp; logo</a>
+        <a href="components/button.html">Button</a>
+        <a href="components/card.html">Card</a>
+        <a href="components/badge.html">Badge</a>
+        <a href="components/tag.html">Tag</a>
+        <a href="components/eyebrow.html">Eyebrow</a>
+        <a href="components/field.html">Field</a>
+        <a href="components/segmented.html">Segmented</a>
+        <a href="components/accordion.html">Accordion</a>
+      </div>
+      <span class="eyebrow">Templates</span>
+      <div class="gl-links">
+        <a href="templates/social/instagram-post.html">Instagram post</a>
+        <a href="templates/social/instagram-story.html">Instagram story</a>
+        <a href="templates/social/linkedin-banner.html">LinkedIn banner</a>
+        <a href="templates/social/profile.html">Profile picture</a>
+        <a href="templates/print/business-card.html">Business card</a>
+      </div>
+      <span class="eyebrow">Logo files</span>
+      <div class="gl-links">
+        <a href="assets/mark.svg" download>Mark · purple SVG ↓</a>
+        <a href="assets/mark-night.svg" download>Mark · night SVG ↓</a>
+        <a href="assets/social/profile.png" download>Profile PNG ↓</a>
+        <a href="assets/social/linkedin-banner.png" download>LinkedIn banner PNG ↓</a>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

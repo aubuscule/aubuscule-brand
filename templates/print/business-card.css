@@ -1,0 +1,61 @@
+/* Business card, 85 × 55 mm. Always dark: put data-theme="dark" on .bc.
+   Sizes are in cqw so the card scales with its wrapper; 850px wide = 10px per mm. */
+.bc-wrap { container-type: inline-size; min-width: 0; }
+
+.bc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 85 / 55;
+  overflow: hidden;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--ink);
+  box-shadow: var(--shadow-object);
+}
+
+.bc-front {
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse 90% 120% at 50% 110%, var(--grad-center) 0%, var(--grad-mid) 45%, var(--bg) 100%);
+}
+.bc-lockup { display: flex; flex-direction: column; align-items: center; gap: 1.18cqw; }
+.bc-lockup .mark { --mark-size: 21.18cqw; }
+.bc-word {
+  font-size: 10.35cqw;
+  font-weight: 600;
+  letter-spacing: var(--tracking-display);
+  line-height: 1.1;
+}
+
+.bc-back { padding: 7.06cqw; justify-content: space-between; }
+.bc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 2.35cqw; }
+.bc-top .mark { --mark-size: 9.41cqw; }
+.bc-name {
+  display: block;
+  font-size: 5.88cqw;
+  font-weight: 600;
+  letter-spacing: var(--tracking-title);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.bc-role {
+  display: block;
+  margin-top: 1.18cqw;
+  font-family: var(--font-mono);
+  font-size: 2.59cqw;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.bc-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.18cqw;
+  font-family: var(--font-mono);
+  font-size: 3.06cqw;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+}
+.bc-dim { color: var(--ink-mute); }

@@ -1,0 +1,9 @@
+# Kept out of the public site
+.git
+.gitignore
+.gitattributes
+.assetsignore
+.wrangler
+wrangler.jsonc
+sources
+*.md

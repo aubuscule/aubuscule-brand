@@ -1,0 +1,11 @@
+// Static files only: no build, no Worker script. Deploy with `npx wrangler deploy`.
+{
+  "name": "aubuscule-brand",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "."
+  },
+  "routes": [
+    { "pattern": "brand.aubuscule.com", "custom_domain": true }
+  ]
+}

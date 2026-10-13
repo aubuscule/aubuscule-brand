@@ -1,0 +1,118 @@
+/* Shared frame for templates. An .artboard is the exact pixel size of the export.
+   Text marked contenteditable can be typed over in the browser before exporting.
+
+   Export: open the page with #export at the end of the address
+   (templates/social/instagram-post.html#export). Everything but the artboard
+   disappears, so a window of the artboard's size is the finished image. */
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-6);
+  min-height: 100vh;
+  padding: var(--sp-10) var(--sp-6);
+  background: var(--surface-dark);
+}
+.stage-note {
+  max-width: 620px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+  text-align: center;
+  color: var(--ink-mute);
+}
+.stage-note a { color: var(--ink-soft); }
+
+.artboard {
+  position: relative;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+}
+.artboard--glow {
+  background: radial-gradient(ellipse 90% 70% at 50% 108%, var(--grad-center) 0%, var(--grad-mid) 45%, var(--bg) 100%);
+}
+.artboard [contenteditable] { outline: none; }
+.artboard [contenteditable]:focus { box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 40%, transparent); }
+
+/* Export mode */
+html:target .stage { display: block; min-height: 0; padding: 0; background: none; }
+html:target .stage-note { display: none; }
+html:target .artboard + .artboard { display: none; }
+
+/* ── Social formats ───────────────────────────────────────────────────*/
+.social { padding: 96px; justify-content: space-between; }
+.social-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.social-title {
+  margin: 0;
+  font-size: 104px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--lh-display);
+  color: var(--ink);
+}
+.social-lead {
+  margin: 0;
+  max-width: 800px;
+  font-size: 38px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.social-body { display: flex; flex-direction: column; gap: 44px; }
+.social-foot { display: flex; align-items: center; justify-content: space-between; }
+.social-foot .logo { gap: 20px; color: var(--ink); }
+.social-foot .logo .mark { --mark-size: 64px; }
+.social-foot .logo-wordmark { font-size: 40px; }
+.social-handle {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+}
+
+.ig-post  { width: 1080px; height: 1350px; }
+.ig-story { width: 1080px; height: 1920px; padding: 260px 96px 300px; }
+
+.li-banner {
+  width: 1584px;
+  height: 396px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 116px 0 96px;
+}
+.li-banner .mark { --mark-size: 340px; }
+.li-banner-title {
+  margin: 0;
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.22;
+  color: var(--ink);
+}
+.li-banner-tag {
+  margin-top: 30px;
+  font-family: var(--font-mono);
+  font-size: 21px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.profile { width: 1080px; height: 1080px; align-items: center; justify-content: center; }
+.profile .mark { --mark-size: 760px; }
+
+/* ── Print ────────────────────────────────────────────────────────────*/
+.print-card { width: 850px; }
+.print-card .bc { border-radius: 0; box-shadow: none; }

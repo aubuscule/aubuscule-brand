@@ -1,0 +1,24 @@
+/* Layout for the specimen cards in this folder. Not part of the brand itself. */
+.guide { padding: var(--sp-5); }
+
+.row { display: flex; gap: var(--sp-3); }
+
+.sw { display: flex; flex-direction: column; gap: var(--sp-1_5); flex: 1; min-width: 0; }
+.sw i { display: block; height: 64px; border-radius: var(--radius-card); border: 1px solid var(--hairline); }
+.sw b { font: 500 12px var(--font-sans); color: var(--ink); }
+.sw span { font: 400 10.5px var(--font-mono); color: var(--ink-mute); }
+
+.bar { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-1); }
+.bar span { width: 56px; font: 400 11px var(--font-mono); color: var(--ink-mute); }
+.bar i { display: block; height: 10px; background: var(--accent); border-radius: 1px; }
+
+.t-display {
+  font: 600 var(--fs-display) / var(--lh-display) var(--font-sans);
+  letter-spacing: var(--tracking-display);
+  color: var(--heading-ink);
+}
+.t-spec { margin-top: var(--sp-3); font: 500 12px var(--font-mono); color: var(--ink-mute); }
+.t-lead { margin: 0 0 var(--sp-2_5); font: 400 var(--fs-lead) / var(--lh-lead) var(--font-sans); color: var(--ink-soft); }
+.t-lead b { color: var(--ink); }
+.t-small { margin: 0; font: 400 var(--fs-small) / var(--lh-body) var(--font-sans); color: var(--ink-soft); }
+.t-mono { margin-top: var(--sp-3_5); font: 500 15px var(--font-mono); color: var(--ink); }
