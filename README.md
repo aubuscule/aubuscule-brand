@@ -54,7 +54,7 @@ To bring a project up to date, read `CHANGELOG.md` from the recorded version to 
 
 ## Templates
 
-Each template page holds an artboard at its exact export size. Text marked editable can be typed over in the browser. Use **Download PNG** above the artboard to save it at 2× resolution (for example, a 1080 × 1350 Instagram post downloads as 2160 × 2700). This uses a pinned capture library from jsDelivr, so exporting requires an internet connection. If the library is unavailable, the screenshot method below remains available.
+Each template page holds an artboard at its exact export size. Text marked editable can be typed over in the browser. Use **Download PNG** above the artboard to save it at 2× resolution (for example, a 1080 × 1350 Instagram post downloads as 2160 × 2700). During PNG export, template marks switch to embedded SVG artwork so the capture preserves their shapes, including when opened from disk. The exporter uses a pinned capture library from jsDelivr, so exporting requires an internet connection. If the library is unavailable, the screenshot method below remains available.
 
 Alternatively, add `#export` to the address so only the artboard shows, then screenshot at the artboard size (for the business card, use `#front` or `#back` to export each side):
 

@@ -21,6 +21,12 @@
 }
 @keyframes mark-slide { to { background-position: -200% 0; } }
 @media (prefers-reduced-motion: reduce) { .mark--gradient { animation: none; } }
+.mark--asset {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8dGl0bGU+QXVidXNjdWxlIG1hcms8L3RpdGxlPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxMDAiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2JiOWFmNyIvPgogICAgICA8c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjZjc3NjhlIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2JiOWFmNyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxtYXNrIGlkPSJjIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIvPjxjaXJjbGUgY3g9IjYzIiBjeT0iMzkiIHI9IjI5IiBmaWxsPSIjMDAwIi8+PC9tYXNrPgogICAgPG1hc2sgaWQ9ImsiPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMDAwIi8+PGNpcmNsZSBjeD0iNTciIGN5PSI0NyIgcj0iMzUiIGZpbGw9IiNmZmYiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjUxIiByPSIzMCIgZmlsbD0iIzAwMCIvPjwvbWFzaz4KICAgIDxwYXR0ZXJuIGlkPSJkIiB3aWR0aD0iMi43IiBoZWlnaHQ9IjIuNyIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDgpIj48Y2lyY2xlIGN4PSIxLjM1IiBjeT0iMS4zNSIgcj0iMC41MiIgZmlsbD0idXJsKCNnKSIvPjwvcGF0dGVybj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZCkiIG1hc2s9InVybCgjaykiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUxIiByPSIyOSIgZmlsbD0idXJsKCNnKSIgbWFzaz0idXJsKCNjKSIvPgo8L3N2Zz4K") center / contain no-repeat;
+  -webkit-mask: none;
+  mask: none;
+  animation: none;
+}
 
 /* ── Logo lockups ─────────────────────────────────────────────────────
    <a class="logo"><span class="mark"></span><span class="logo-wordmark">Aubuscule</span></a> */

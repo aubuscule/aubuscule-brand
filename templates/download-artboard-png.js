@@ -10,6 +10,10 @@
         return;
       }
 
+      var exportMarks = Array.from(artboard.querySelectorAll(".mark")).filter(function (mark) {
+        return !mark.classList.contains("mark--asset");
+      });
+
       button.disabled = true;
       if (status) {
         status.dataset.state = "working";
@@ -22,6 +26,10 @@
           throw new Error("The PNG capture library is unavailable.");
         }
         if (document.fonts) await document.fonts.ready;
+
+        exportMarks.forEach(function (mark) {
+          mark.classList.add("mark--asset");
+        });
 
         var blob = await capture.toBlob(artboard, {
           pixelRatio: 2,
@@ -46,6 +54,9 @@
       } catch (error) {
         reportError(error);
       } finally {
+        exportMarks.forEach(function (mark) {
+          mark.classList.remove("mark--asset");
+        });
         button.disabled = false;
       }
     });
