@@ -1,6 +1,6 @@
 # Aubuscule brand
 
-The source of truth for the Aubuscule brand: tokens, mark, components, templates and usage rules. Plain HTML and CSS, no build step, no dependencies. Published at brand.aubuscule.com.
+The source of truth for the Aubuscule brand: tokens, mark, components, templates and usage rules. Plain HTML and CSS with small browser scripts; no build step or package manager. Published at brand.aubuscule.com.
 
 Aubuscule is a Brussels-based pair of digital craftspeople serving artists across four domains: digital, audio, video, admin. It also publishes small paid software (Remplate, Zones Tonales). Tagline: *Concentrez-vous sur votre art. On fait le reste.*
 
@@ -55,6 +55,8 @@ To bring a project up to date, read `CHANGELOG.md` from the recorded version to 
 ## Templates
 
 Each template page holds an artboard at its exact export size. Text marked editable can be typed over in the browser. Use **Download PNG** above the artboard to save it at 2× resolution (for example, a 1080 × 1350 Instagram post downloads as 2160 × 2700). During PNG export, template marks switch to embedded SVG artwork so the capture preserves their shapes, including when opened from disk. The exporter uses a pinned capture library from jsDelivr, so exporting requires an internet connection. If the library is unavailable, the screenshot method below remains available.
+
+The editable business-card template renders a QR code from its contact text as a vCard, and the PNG export includes it. The 22 mm QR uses medium error correction and a reduced center mark to improve printed scanability. Charcoal modules sit on a muted-gray field matched to the contact text, using standard dark-on-light QR polarity. The sample contact is Boris Rorsvort, with a clearly illustrative Belgian mobile number (`+32 470 00 00 00`); replace it before publishing. `assets/business-card-back.svg` contains the matching code for the template's sample contact. QR generation stays in the browser; the encoder is vendored at `templates/print/vendor/qrcode-generator.js` under its MIT license.
 
 Alternatively, add `#export` to the address so only the artboard shows, then screenshot at the artboard size (for the business card, use `#front` or `#back` to export each side):
 

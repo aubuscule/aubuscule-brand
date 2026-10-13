@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="business-card.css">
 <link rel="stylesheet" href="../templates.css">
 <script defer src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+<script defer src="vendor/qrcode-generator.js"></script>
+<script defer src="business-card-qr.js"></script>
 <script defer src="../download-artboard-png.js"></script>
 <script>
   if (location.hash === '#export-back') location.replace('#back');
@@ -29,10 +31,17 @@
 </div></div>
 <div id="back" class="artboard print-card bc-wrap"><div class="bc bc-back">
   <div class="bc-top">
-    <div><span class="bc-name" contenteditable>Name Surname</span><span class="bc-role" contenteditable>Co-founder</span></div>
-    <span class="mark mark--gradient"></span>
+    <div><span class="bc-name" data-vcard-field="name" contenteditable>Boris Rorsvort</span><span class="bc-role" data-vcard-field="role" contenteditable>Development, design &amp; automation</span></div>
   </div>
-  <div class="bc-contact"><span contenteditable>contact@aubuscule.com</span><span contenteditable>@aubuscule_agency</span><span class="bc-dim" contenteditable>Brussels, Belgium</span></div>
+  <div class="bc-contact">
+    <div class="bc-contact-details">
+      <span data-vcard-field="email" contenteditable>contact@aubuscule.com</span>
+      <span data-vcard-field="phone" contenteditable>+32 470 00 00 00</span>
+      <span data-vcard-field="social" contenteditable>@aubuscule_agency</span>
+      <span class="bc-dim" data-vcard-field="location" contenteditable>Brussels, Belgium</span>
+    </div>
+    <div class="bc-qr-frame" data-business-card-qr></div>
+  </div>
 </div></div>
 </body>
 </html>

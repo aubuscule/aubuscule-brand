@@ -21,6 +21,14 @@
       }
 
       try {
+        var qrFrame = artboard.querySelector("[data-business-card-qr]");
+        if (qrFrame) {
+          if (!window.aubusculeBusinessCardQr) {
+            throw new Error("The business card QR code is unavailable.");
+          }
+          window.aubusculeBusinessCardQr.refresh();
+        }
+
         var capture = window.htmlToImage;
         if (!capture || typeof capture.toBlob !== "function") {
           throw new Error("The PNG capture library is unavailable.");
